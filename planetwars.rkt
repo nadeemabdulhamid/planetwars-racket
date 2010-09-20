@@ -109,7 +109,7 @@ XYZ
   (printf "~a ~a ~a~n" 
           (if (planet? src) (planet-id src) src)
           (if (planet? dest) (planet-id dest) dest)
-          num)
+          (inexact->exact (floor num)))
   (flush-output))
 
 (define (finish-turn)
